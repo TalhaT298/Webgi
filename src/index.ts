@@ -37,8 +37,7 @@ async function setupViewer(){
     const manager = await viewer.addPlugin(AssetManagerPlugin)
 
     // Add a popup(in HTML) with download progress when any asset is downloading.
-    await viewer.addPlugin(AssetManagerBasicPopupPlugin)
-
+    
     // Add plugins individually.
     // await viewer.addPlugin(GBufferPlugin)
     // await viewer.addPlugin(new ProgressivePlugin(32))
@@ -73,10 +72,7 @@ async function setupViewer(){
     // );
 
     // Add some UI for tweak and testing.
-    const uiPlugin = await viewer.addPlugin(TweakpaneUiPlugin)
-    // Add plugins to the UI to see their settings.
-    uiPlugin.setupPlugins<IViewerPlugin>(TonemapPlugin, CanvasSnipperPlugin)
-
+   
 }
 
 setupViewer()
